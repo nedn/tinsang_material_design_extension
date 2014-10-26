@@ -1,0 +1,9 @@
+body {
+  color: purple;
+  background-color: #d8da3d
+}
+
+article .uparrow, article .downarrow {
+  font-size: 90px;
+  cursor: pointer;
+      }

@@ -1,15 +1,18 @@
 {
   "manifest_version": 2,
 
-  "name": "One-click Kittens",
-  "description": "This extension demonstrates a 'browser action' with kittens.",
-  "version": "1.0",
-
-  "browser_action": {
-    "default_icon": "icon.png",
-    "default_popup": "popup.html"
-  },
-  "permissions": [
-    "https://secure.flickr.com/"
-  ]
+    "name": "tinsang in material design",
+    "description": "This extension adapts tinsang's user interface to Google's material design",
+    "version": "1.0",
+    "author": "Ned Nguyen",
+    "content_scripts": [
+    {
+      "matches": ["http://tinsang.net/*"],
+      "css": ["style.css"],
+      "js": ["jquery-2.1.1.min.js", "script.js"],
+      "run_at": "document_end"
+    }
+  ],
+    "permissions": ["http://tinsang.net/*"],
+    "web_accessible_resources": ["svg/*.svg"]
 }
